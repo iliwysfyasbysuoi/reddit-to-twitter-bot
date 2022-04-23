@@ -3,6 +3,7 @@ const fs = require('fs');
 const subreddit = require('./subreddits');
 const urlGetter = require('./urlGetter');
 const table = require('./checker');
+const Jimp = require('jimp') ;
 
 module.exports = {
   //downloads a random image and returns its URL
@@ -41,6 +42,8 @@ module.exports = {
     try {
       const { filename, image } = await downloader.image(downloadOptions);
       console.log('-> Image downloaded!');
+
+      
     } catch (e) {
       console.log('-> Image download failed' + e);
       process.exit();

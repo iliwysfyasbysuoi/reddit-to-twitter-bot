@@ -22,8 +22,12 @@
   },
   "homepage": "https://github.com/tayfurunal/RedditToTwitter-Bot#readme",
   "dependencies": {
+    "dotenv": "^16.0.0",
     "image-downloader": "^3.5.0",
+    "jimp": "^0.16.1",
     "node-fetch": "^2.6.0",
-    "twit": "^2.2.11"
+    "snoowrap": "^1.23.0",
+    "twit": "^2.2.11",
+    "twitter-api-v2": "^1.12.0"
   }
 }
