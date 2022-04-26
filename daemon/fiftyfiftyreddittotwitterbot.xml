@@ -1,0 +1,30 @@
+<service>
+	<id>fiftyfiftyreddittotwitterbot.exe</id>
+	<name>Fifty Fifty Reddit to Twitter Bot</name>
+	<description>Bot to tweet. Run automatically on startup noed-windows</description>
+	<executable>C:\Program Files\nodejs\node.exe</executable>
+	<argument>C:\Users\seanx\OneDrive\Documents\GitHub\nodejs-apps-on-startuo\node_modules\node-windows\lib\wrapper.js</argument>
+	<argument>--file</argument>
+	<argument>C:\Users\seanx\OneDrive\Documents\GitHub\reddit-to-twitter-bot\bot.js</argument>
+	<argument>--scriptoptions=</argument>
+	<argument>--log</argument>
+	<argument>Fifty Fifty Reddit to Twitter Bot wrapper</argument>
+	<argument>--grow</argument>
+	<argument>0.25</argument>
+	<argument>--wait</argument>
+	<argument>1</argument>
+	<argument>--maxrestarts</argument>
+	<argument>3</argument>
+	<argument>--abortonerror</argument>
+	<argument>n</argument>
+	<argument>--stopparentfirst</argument>
+	<argument>false</argument>
+	<logmode>rotate</logmode>
+	<stoptimeout>30sec</stoptimeout>
+	<serviceaccount>
+		<domain>DESKTOP-L954SII</domain>
+		<user>LocalSystem</user>
+		<password></password>
+	</serviceaccount>
+	<workingdirectory>C:\Users\seanx\OneDrive\Documents\GitHub\nodejs-apps-on-startuo</workingdirectory>
+</service>

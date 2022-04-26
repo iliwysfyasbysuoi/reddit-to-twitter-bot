@@ -108,7 +108,7 @@ module.exports = {
                     rwClient.v2.tweet({ text: "Options", 
                                           poll: {
                                             options: [ `${Option1.substring(0,22)}...`, `${Option2.substring(0,22)}...`], 
-                                            duration_minutes: 10080
+                                            duration_minutes: 60
                                           },
                                           reply: {
                                             in_reply_to_tweet_id: BlurredTweet_ID
@@ -134,15 +134,17 @@ module.exports = {
                         //     console.log('-> Original Photo tweet sent!\r\n');
                         //     console.log('-> All Tweets in the thread finished.');
                         // });
-                        
-                        main.T.post('statuses/update', {status: "Original Photo [Spoiler].\n.\n.\n.\n.\n.\n.\n.\n.\n.\n", in_reply_to_status_id: PollTweet_ID, media_ids: [mediaId], possibly_sensitive: true}, 
-                          function(err, data, response) {
-                            console.log("OriginalTweet_Data" + JSON.stringify(data));
-                            console.log('-> Original Photo tweet sent!\r\n');
-                            console.log('-> All Tweets in the thread finished.');
 
-                          }
-                        );
+                        setInterval(main.T.post('statuses/update', {status: "Original Photo [Spoiler].\n.\n.\n.\n.\n.\n.\n.\n.\n.\n", in_reply_to_status_id: PollTweet_ID, media_ids: [mediaId], possibly_sensitive: true}, 
+                        function(err, data, response) {
+                          console.log("OriginalTweet_Data" + JSON.stringify(data));
+                          console.log('-> Original Photo tweet sent!\r\n');
+                          console.log('-> All Tweets in the thread finished.');
+
+                        }
+                        ),
+                        3600000);
+                        
 
 
                     })

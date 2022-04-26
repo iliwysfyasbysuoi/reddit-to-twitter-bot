@@ -13,4 +13,4 @@ console.log(
 
 //every 5 hour, a random images will be tweeted (18000000 = 5hr)
 postTweet.tweetImage();
-setInterval(postTweet.tweetImage, 60000);
+setInterval(postTweet.tweetImage, 5400000);
